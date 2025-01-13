@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: b9-backend-app
-  replicas: 2 
+replicas: 2 
   template:
     metadata:
       labels:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: b9-backend-app
-          image: imagemahesh/imagemahesh:latest
+          image: 730335556816.dkr.ecr.ap-south-1.amazonaws.com/imagemahesh:latest
           ports:
             - containerPort: 8080 
