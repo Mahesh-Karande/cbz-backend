@@ -18,7 +18,7 @@ pipeline {
                     docker build -t imagemahesh .
                     docker tag imagemahesh:latest 730335556816.dkr.ecr.ap-south-1.amazonaws.com/imagemahesh:latest
                     docker push 730335556816.dkr.ecr.ap-south-1.amazonaws.com/imagemahesh:latest
-                    docker rmi imagemahesh/imagemahesh:latest
+                    docker rmi imagemahesh
                     kubectl apply -f ./yaml/
                 '''
             }
