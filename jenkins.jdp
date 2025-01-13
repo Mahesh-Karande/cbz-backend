@@ -14,7 +14,6 @@ pipeline {
         stage('deploy'){
             steps {
                 sh '''
-                    aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 730335556816.dkr.ecr.ap-south-1.amazonaws.com
                     docker build -t imagemahesh .
                     docker tag imagemahesh:latest 730335556816.dkr.ecr.ap-south-1.amazonaws.com/imagemahesh:latest
                     docker push 730335556816.dkr.ecr.ap-south-1.amazonaws.com/imagemahesh:latest
