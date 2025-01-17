@@ -14,10 +14,10 @@ pipeline {
         stage('deploy'){
             steps {
                 sh '''
-                    docker build -t mahes-image .
-                    docker tag mahes-image:latest 730335556816.dkr.ecr.ap-south-1.amazonaws.com/mahes-image:latest
-                    docker push 730335556816.dkr.ecr.ap-south-1.amazonaws.com/mahes-image:latest
-                    docker rmi mahes-image
+                    docker build -t mahesh-karande .
+                    docker tag mahesh-karande:latest 730335556816.dkr.ecr.ap-south-1.amazonaws.com/mahesh-karande:latest
+                    docker push 730335556816.dkr.ecr.ap-south-1.amazonaws.com/mahesh-karande:latest
+                    docker rmi mahesh-karande
                     kubectl apply -f ./yaml/
                 '''
             }
